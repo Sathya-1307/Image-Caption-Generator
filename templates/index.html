@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Caption Generator</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+  #drop-area { border: 2px dashed #ccc; padding: 30px; cursor: pointer; }
+  #drop-area.hover { border-color: #333; }
+  img { max-width: 300px; margin-top: 20px; }
+  #caption { margin-top: 20px; font-size: 1.2em; color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Image Caption Generator</h1>
+
+<div id="drop-area">
+  <p>Drag & Drop an image here or click to select</p>
+  <input type="file" id="fileElem" accept="image/*" style="display:none">
+</div>
+
+<img id="preview" src="#" alt="" style="display:none">
+<div id="caption"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
